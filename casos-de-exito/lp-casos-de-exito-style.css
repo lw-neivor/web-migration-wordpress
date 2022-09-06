@@ -1676,8 +1676,10 @@
   }
   
   .u-section-5 .u-image-1 {
-    min-height: 676px;
-    background-position: 50% 50%;
+   height: 500px;
+    /* background-position: 50% 70%;
+    display: flex;
+    align-items: center; */
   }
   
   .u-section-5 .u-container-layout-2 {
