@@ -51,7 +51,7 @@
     margin: 50px 109px 0 0;
   }
   
-  .u-section-1 .u-btn-1 {
+  .u-section-1 .u-btn-1, .u-section-3 .u-btn-1,.u-section-5 .u-btn-1 {
     font-size: 1.125rem;
     letter-spacing: 1px;
     border-style: none;
@@ -60,6 +60,8 @@
     text-transform: none;
     margin: 65px auto 0 0;
     padding: 14px 52px 15px 51px;
+    border-radius: 8px;
+    cursor: pointer;
   }
   
   .u-section-1 .u-image-2 {
