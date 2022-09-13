@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 .u-section-1 {
     background-image: none;
   }

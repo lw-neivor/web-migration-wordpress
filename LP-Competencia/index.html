@@ -17,7 +17,7 @@
     <meta property="og:description"
         content="Neivor hace que la administración de tus condominios sea más sencilla y centralizada desde una sola plataforma, simplificando la administración de condominios y la forma de vivir en comunidad.">
     <meta property="og:image"
-        content="{{ get_asset_url('/LP-competencia/assets/portrait-of-a-young-cheerful-bearded-man-wearing-t-2021-08-27-23-32-54-utc2.png') }}">
+        content="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/portrait-of-a-young-cheerful-bearded-man-wearing-t-2021-08-27-23-32-54-utc2.png">
     <meta property="og:url" content="https://landing.neivor.com/administracion-de-condominios/">
     <link rel="canonical" href="https://landing.neivor.com/administracion-de-condominios/">
     <link rel="icon" href="https://cdn.neivor.com/cdn/mexico/static/landing/images/favicon.png">
@@ -292,9 +292,10 @@
                     inteligente</span>
                 <br>
             </h2>
-            <div class="u-expanded-width u-gallery u-layout-horizontal u-no-transition u-show-text-on-hover u-width-fixed u-gallery-1"
-                id="carousel-97c2">
-                <div class="u-gallery-inner u-gallery-inner-1" role="listbox">
+            <div
+                class="u-expanded-width u-gallery u-layout-horizontal u-no-transition u-show-text-on-hover u-width-fixed u-gallery-1">
+                <div class="ctn-carousel u-gallery-inner u-gallery-inner-1" role="listbox" id="carousel-97c2"
+                    style="scroll-behavior: smooth;">
                     <div class="u-effect-fade u-gallery-item u-gallery-item-1">
                         <img class="u-back-slide" data-image-width="147" data-image-height="93"><img
                             class="u-back-image u-image-contain lazyload u-back-image-1"
@@ -487,32 +488,18 @@
                     </div>
                 </div>
                 <a class="u-absolute-vcenter u-custom-color-2 u-gallery-nav u-gallery-nav-prev u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-custom-color-1 u-gallery-nav-1"
-                    href="https://neivor.com/mx/contacto/" role="button">
+                    role="button" id="left-arrow1">
                     <span aria-hidden="true">
                         <svg viewBox="0 0 451.847 451.847">
                             <path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
 c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
-c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path>
-                        </svg>
-                    </span>
-                    <span class="sr-only">
-                        <svg viewBox="0 0 451.847 451.847">
-                            <path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
-c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
-c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path>
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,97.141,225.92z"></path>
                         </svg>
                     </span>
                 </a>
                 <a class="u-absolute-vcenter u-custom-color-2 u-gallery-nav u-gallery-nav-next u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-custom-color-1 u-gallery-nav-2"
-                    href="#" role="button">
+                    role="button" id="right-arrow1">
                     <span aria-hidden="true">
-                        <svg viewBox="0 0 451.846 451.847">
-                            <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
-L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
-c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path>
-                        </svg>
-                    </span>
-                    <span class="sr-only">
                         <svg viewBox="0 0 451.846 451.847">
                             <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
 L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
@@ -522,6 +509,20 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                 </a>
             </div>
         </div>
+        <script>
+            const row = document.querySelector('.ctn-carousel');
+            const leftArrow1 = document.getElementById('left-arrow1');
+            const rightArrow1 = document.getElementById('right-arrow1');
+            //  ----- ----- Event Listener for arrows ----- -----
+            rightArrow1.addEventListener('click', () => {
+                row.scrollLeft += row.offsetWidth;
+            });
+
+            leftArrow1.addEventListener('click', () => {
+                row.scrollLeft -= row.offsetWidth;
+            });
+
+        </script>
     </section>
     <section class="u-align-center u-clearfix u-custom-color-5 u-section-4" id="sec-c821">
         <div class="u-clearfix u-sheet u-sheet-1">
@@ -597,24 +598,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                     </div>
                 </div>
             </div>
-            <!-- <editor-squiggler
-                style="height: 0px; width: 900px; margin-right: auto; margin-left: auto; margin-bottom: 0px;">
-                <style>
-                    @media print {
-                        .ms-editor-squiggler {
-                            display: none !important;
-                        }
-                    }
 
-                    .ms-editor-squiggler {
-                        all: initial;
-                        display: block !important;
-                        height: 0px !important;
-                        width: 0px !important;
-                    }
-                </style>
-                <div class="ms-editor-squiggler"></div>
-            </editor-squiggler> -->
             <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
                 <div class="u-layout">
                     <div class="u-layout-row">
@@ -626,11 +610,11 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                                     <div class="u-accordion-item">
                                         <a class="u-accordion-link u-active-white u-border-2 u-border-active-custom-color-2 u-border-custom-color-2 u-border-hover-custom-color-2 u-button-style u-hover-white u-text-active-black u-text-black u-text-hover-black u-white u-accordion-link-1"
                                             id="link-accordion-7c0e" aria-controls="accordion-7c0e"
-                                            aria-selected="false">
+                                            onclick="showSlideById('accordion-7c0e')" aria-selected="false">
                                             <span class="u-accordion-link-text">Más información</span><span
                                                 class="u-accordion-link-icon u-icon u-icon-rectangle u-text-active-palette-5-base u-text-hover-palette-5-base u-text-palette-5-base u-icon-1"><svg
                                                     class="u-svg-link" preserveAspectRatio="xMidYMin slice"
-                                                    viewBox="0 0 512 512" style="">
+                                                    viewBox="0 0 512 512">
                                                     <use xmlns:xlink="http://www.w3.org/1999/xlink"
                                                         xlink:href="#svg-c706"></use>
                                                 </svg><svg xmlns="http://www.w3.org/2000/svg"
@@ -654,13 +638,13 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                                                     class="u-custom-list u-file-icon u-indent-0 u-spacing-12 u-text u-text-10">
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse19.png') }}"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse19.png"
                                                                 alt="">
                                                         </div> Múltiples cuentas bancarias.
                                                     </li>
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse19.png') }}"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse19.png"
                                                                 alt="">
                                                         </div>
                                                     </li>
@@ -669,7 +653,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                                                     </li>
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse19.png') }}"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse19.png"
                                                                 alt="">
                                                         </div>Múltiples medios de pago: Tarjeta de crédito/débito
                                                         nacionales e internacionales, SPEI y tiendas de
@@ -677,14 +661,14 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                                                     </li>
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse19.png') }}"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse19.png"
                                                                 alt="">
                                                         </div>Pagos recurrentes de cuotas de mantenimiento con tarjeta
                                                         de crédito y SPEI (asignación de CLABE única).<br>
                                                     </li>
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse19.png') }}"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse19.png"
                                                                 alt="">
                                                         </div>+14 reportes financieros: ingresos, egresos, morosidad,
                                                         flujo de caja, presupuesto, estado de resultados, entre
@@ -692,14 +676,14 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                                                     </li>
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse19.png') }}"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse19.png"
                                                                 alt="">
                                                         </div>Facturación CFDI 4.0, app propietarios registro y
                                                         validación en línea de datos fiscales..
                                                     </li>
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse19.png') }}"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse19.png"
                                                                 alt="">
                                                         </div>Recordatorios de pago, sanciones, intereses, descuentos y
                                                         condonaciones .&nbsp;<br>
@@ -719,7 +703,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                                     <div class="u-accordion-item">
                                         <a class="u-accordion-link u-active-white u-border-2 u-border-active-custom-color-2 u-border-custom-color-2 u-border-hover-custom-color-2 u-button-style u-hover-white u-text-active-black u-text-black u-text-hover-black u-white u-accordion-link-2"
                                             id="link-accordion-7c0e" aria-controls="accordion-7c0e"
-                                            aria-selected="false">
+                                            onclick="showSlideById('accordion-7c0e-2')" aria-selected="false">
                                             <span class="u-accordion-link-text">Más información</span><span
                                                 class="u-accordion-link-icon u-icon u-icon-rectangle u-text-active-palette-5-base u-text-hover-palette-5-base u-text-palette-5-base u-icon-2"><svg
                                                     class="u-svg-link" preserveAspectRatio="xMidYMin slice"
@@ -741,19 +725,19 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                                                 </svg></span>
                                         </a>
                                         <div class="u-accordion-pane u-align-left u-container-style u-custom-color-2 u-accordion-pane-2"
-                                            id="accordion-7c0e" aria-labelledby="link-accordion-7c0e">
+                                            id="accordion-7c0e-2" aria-labelledby="link-accordion-7c0e">
                                             <div class="u-container-layout u-valign-top u-container-layout-8">
                                                 <ul
                                                     class="u-custom-list u-file-icon u-indent-0 u-spacing-12 u-text u-text-11">
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse26.png') }}"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse26.png"
                                                                 alt="">
                                                         </div> Control de aforos y acompañantes.
                                                     </li>
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse26.png') }}"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse26.png"
                                                                 alt="">
                                                         </div>
                                                     </li>
@@ -761,45 +745,45 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                                                     </li>
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse26.png') }}"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse26.png"
                                                                 alt="">
                                                         </div> Reserva y cancelación de amenidades con maximos
                                                         dias-horas de anticipación.<br>
                                                     </li>
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse26.png') }}"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse26.png"
                                                                 alt="">
                                                         </div> Configuración de amenidades por bloques de horarios y
                                                         privadas específicas.<br>
                                                     </li>
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse26.png') }}"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse26.png"
                                                                 alt="">
                                                         </div> Limitación de uso de amenidades a morosos.<br>
                                                     </li>
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse26.png') }}"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse26.png"
                                                                 alt="">
                                                         </div> Manejo de mantenimiento de amenidades.
                                                     </li>
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse26.png') }}"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse26.png"
                                                                 alt="">
                                                         </div> Límite de reservas por unidad semana/mes.<br>
                                                     </li>
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse26.png') }}"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse26.png"
                                                                 alt="">
                                                         </div>Reglamento de las amenidades.<br>
                                                     </li>
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse26.png') }}"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse26.png"
                                                                 alt="">
                                                         </div>Límite de reservas activas por unidad y amenidad.<br>
                                                     </li>
@@ -818,11 +802,11 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                                     <div class="u-accordion-item">
                                         <a class="u-accordion-link u-active-white u-border-2 u-border-active-custom-color-2 u-border-custom-color-2 u-border-hover-custom-color-2 u-button-style u-hover-white u-text-active-black u-text-black u-text-hover-black u-white u-accordion-link-3"
                                             id="link-accordion-7c0e" aria-controls="accordion-7c0e"
-                                            aria-selected="false">
+                                            onclick="showSlideById('accordion-7c0e-3')" aria-selected="false">
                                             <span class="u-accordion-link-text">Más información</span><span
                                                 class="u-accordion-link-icon u-icon u-icon-rectangle u-text-active-palette-5-base u-text-hover-palette-5-base u-text-palette-5-base u-icon-3"><svg
                                                     class="u-svg-link" preserveAspectRatio="xMidYMin slice"
-                                                    viewBox="0 0 512 512" style="">
+                                                    viewBox="0 0 512 512">
                                                     <use xmlns:xlink="http://www.w3.org/1999/xlink"
                                                         xlink:href="#svg-85bf"></use>
                                                 </svg><svg xmlns="http://www.w3.org/2000/svg"
@@ -840,20 +824,20 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                                                 </svg></span>
                                         </a>
                                         <div class="u-accordion-pane u-align-left u-container-style u-custom-color-2 u-accordion-pane-3"
-                                            id="accordion-7c0e" aria-labelledby="link-accordion-7c0e">
+                                            id="accordion-7c0e-3" aria-labelledby="link-accordion-7c0e">
                                             <div class="u-container-layout u-container-layout-10">
                                                 <ul
                                                     class="u-custom-list u-file-icon u-indent-0 u-spacing-12 u-text u-text-12">
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse33.png') }}"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse33.png"
                                                                 alt="">
                                                         </div> Registro de visitantes y visitantes recurrentes mediante
                                                         QR.
                                                     </li>
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse33.png') }}"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse33.png"
                                                                 alt="">
                                                         </div>
                                                     </li>
@@ -862,25 +846,25 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                                                     </li>
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse33.png') }}"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse33.png"
                                                                 alt="">
                                                         </div> Recepción y trazabilidad de paquetería.<br>
                                                     </li>
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse33.png') }}"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse33.png"
                                                                 alt="">
                                                         </div> Fotografías de documentos y matriculas/placa.<br>
                                                     </li>
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse33.png') }}"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse33.png"
                                                                 alt="">
                                                         </div> Bitacora digital de accesos de entradas y salidas.<br>
                                                     </li>
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse33.png') }}g"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse33.png"
                                                                 alt="">
                                                         </div> Limite de visitantes por unidad.
                                                     </li>
@@ -899,11 +883,11 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                                     <div class="u-accordion-item">
                                         <a class="u-accordion-link u-active-white u-border-2 u-border-active-custom-color-2 u-border-custom-color-2 u-border-hover-custom-color-2 u-button-style u-hover-white u-text-active-black u-text-black u-text-hover-black u-white u-accordion-link-4"
                                             id="link-accordion-7c0e" aria-controls="accordion-7c0e"
-                                            aria-selected="false">
+                                            onclick="showSlideById('accordion-7c0e-4')" aria-selected="false">
                                             <span class="u-accordion-link-text">Más información</span><span
                                                 class="u-accordion-link-icon u-icon u-icon-rectangle u-text-active-palette-5-base u-text-hover-palette-5-base u-text-palette-5-base u-icon-4"><svg
                                                     class="u-svg-link" preserveAspectRatio="xMidYMin slice"
-                                                    viewBox="0 0 512 512" style="">
+                                                    viewBox="0 0 512 512">
                                                     <use xmlns:xlink="http://www.w3.org/1999/xlink"
                                                         xlink:href="#svg-cc13"></use>
                                                 </svg><svg xmlns="http://www.w3.org/2000/svg"
@@ -921,19 +905,19 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                                                 </svg></span>
                                         </a>
                                         <div class="u-accordion-pane u-align-left u-container-style u-custom-color-2 u-accordion-pane-4"
-                                            id="accordion-7c0e" aria-labelledby="link-accordion-7c0e">
+                                            id="accordion-7c0e-4" aria-labelledby="link-accordion-7c0e">
                                             <div class="u-container-layout u-valign-top u-container-layout-12">
                                                 <ul
                                                     class="u-custom-list u-file-icon u-indent-0 u-spacing-12 u-text u-text-13">
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse40.png') }}"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse40.png"
                                                                 alt="">
                                                         </div> App especializada en residentes en inglés y español.
                                                     </li>
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse40.png') }}"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse40.png"
                                                                 alt="">
                                                         </div>
                                                     </li>
@@ -941,34 +925,34 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                                                     </li>
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse40.png') }}"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse40.png"
                                                                 alt="">
                                                         </div>Recepción y gestión de tickets creados por residentes.<br>
                                                     </li>
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse40.png') }}"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse40.png"
                                                                 alt="">
                                                         </div>Censo habitacional, mascotas, contacto de emergencia y
                                                         vehiculos.<br>
                                                     </li>
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse40.png') }}"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse40.png"
                                                                 alt="">
                                                         </div>Compra, venta o intercambio de productos y servicios entre
                                                         residentes.<br>
                                                     </li>
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse40.png') }}"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse40.png"
                                                                 alt="">
                                                         </div>Comunicación por chat interno, notificaciones, mails,
                                                         anuncios y clubes.
                                                     </li>
                                                     <li>
                                                         <div class="u-list-icon">
-                                                            <img src="{{ get_asset_url('/LP-competencia/assets/Ellipse40.png') }}"
+                                                            <img src="https://cdn.neivor.com/cdn/mexico/static/landing/competencia/Ellipse40.png"
                                                                 alt="">
                                                         </div>Interación con encuestas, votaciones y reacciones a
                                                         anuncios publicados.&nbsp;<br>
@@ -984,7 +968,6 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                 </div>
             </div>
         </div>
-
     </section>
     <section class="u-align-center u-clearfix u-custom-color-2 u-section-5" id="form">
         <div
@@ -1005,27 +988,14 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                             <div class="u-container-layout u-valign-middle u-container-layout-2">
                                 <editor-squiggler
                                     style="height: 0px; width: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: auto;">
-                                    <!-- <style>
-                                        @media print {
-                                            .ms-editor-squiggler {
-                                                display: none !important;
-                                            }
-                                        }
 
-                                        .ms-editor-squiggler {
-                                            all: initial;
-                                            display: block !important;
-                                            height: 0px !important;
-                                            width: 0px !important;
-                                        }
-                                    </style> -->
                                     <div class="ms-editor-squiggler"></div>
                                 </editor-squiggler>
                                 <div class="u-accordion u-collapsed-by-default u-faq u-spacing-3 u-accordion-1">
                                     <div class="u-accordion-item">
                                         <a class="u-accordion-link u-active-white u-border-1 u-border-grey-5 u-border-no-left u-border-no-right u-border-no-top u-button-style u-hover-white u-radius-10 u-white u-accordion-link-1"
                                             id="link-accordion-f600" aria-controls="accordion-f600"
-                                            aria-selected="false">
+                                            onclick="showSlideById('accordion-f600-0')" aria-selected="false">
                                             <span class="u-accordion-link-text">¿Qué es Neivor?</span><span
                                                 class="u-accordion-link-icon u-file-icon u-icon u-text-palette-5-base u-icon-1"><svg
                                                     class="u-svg-link" preserveAspectRatio="xMidYMin slice"
@@ -1039,7 +1009,7 @@ c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path>
                                                 </svg></span>
                                         </a>
                                         <div class="u-accordion-pane u-container-style u-grey-5 u-accordion-pane-1"
-                                            id="accordion-f600" aria-labelledby="link-accordion-f600">
+                                            id="accordion-f600-0" aria-labelledby="link-accordion-f600">
                                             <div class="u-container-layout u-container-layout-3">
                                                 <div class="fr-view u-clearfix u-rich-text u-text">
                                                     <p>Neivor es una aplicación para administrar condominios que permite
@@ -1058,7 +1028,8 @@ c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path>
                                     </div>
                                     <div class="u-accordion-item">
                                         <a class="u-accordion-link u-active-white u-border-1 u-border-grey-5 u-border-no-left u-border-no-right u-border-no-top u-button-style u-hover-white u-radius-10 u-white u-accordion-link-2"
-                                            id="link-bba8" aria-controls="bba8" aria-selected="false">
+                                            id="link-bba8" aria-controls="bba8" aria-selected="false"
+                                            onclick="showSlideById('bba8')">
                                             <span class="u-accordion-link-text">¿Qué beneficios obtengo con
                                                 Neivor?</span><span
                                                 class="u-accordion-link-icon u-icon u-text-palette-5-base u-icon-2"><svg
@@ -1091,7 +1062,8 @@ c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path>
                                     </div>
                                     <div class="u-accordion-item">
                                         <a class="u-accordion-link u-active-white u-border-1 u-border-grey-5 u-border-no-left u-border-no-right u-border-no-top u-button-style u-hover-white u-radius-10 u-white u-accordion-link-3"
-                                            id="link-82a8" aria-controls="82a8" aria-selected="false">
+                                            id="link-82a8" aria-controls="82a8" aria-selected="false"
+                                            onclick="showSlideById('82a8')">
                                             <span class="u-accordion-link-text">¿Cómo adquiero Neivor?</span><span
                                                 class="u-accordion-link-icon u-icon u-text-palette-5-base u-icon-3"><svg
                                                     class="u-svg-link" preserveAspectRatio="xMidYMin slice"
@@ -1123,7 +1095,8 @@ c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path>
                                     </div>
                                     <div class="u-accordion-item">
                                         <a class="u-accordion-link u-active-white u-border-1 u-border-grey-5 u-border-no-left u-border-no-right u-border-no-top u-button-style u-hover-white u-radius-10 u-white u-accordion-link-4"
-                                            id="link-b6c3" aria-controls="b6c3" aria-selected="false">
+                                            id="link-b6c3" aria-controls="b6c3" aria-selected="false"
+                                            onclick="showSlideById('b6c3')">
                                             <span class="u-accordion-link-text">¿Qué tan seguro es Neivor?</span><span
                                                 class="u-accordion-link-icon u-icon u-text-palette-5-base u-icon-4"><svg
                                                     class="u-svg-link" preserveAspectRatio="xMidYMin slice"
@@ -1154,7 +1127,8 @@ c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path>
                                     </div>
                                     <div class="u-accordion-item">
                                         <a class="u-accordion-link u-active-white u-border-1 u-border-grey-5 u-border-no-left u-border-no-right u-border-no-top u-button-style u-hover-white u-radius-10 u-white u-accordion-link-5"
-                                            id="link-a26d" aria-controls="a26d" aria-selected="false">
+                                            id="link-a26d" aria-controls="a26d" aria-selected="false"
+                                            onclick="showSlideById('a26d')">
                                             <span class="u-accordion-link-text">¿En qué países funciona
                                                 Neivor?</span><span
                                                 class="u-accordion-link-icon u-icon u-text-palette-5-base u-icon-5"><svg
@@ -1191,7 +1165,14 @@ c0.4-0.4,0.4-0.9,0-1.3c-0.4-0.4-1-0.4-1.3,0L8,10.7z"></path>
             </div>
         </div>
     </section>
+    <script>
+        function showSlideById(id) {
+            document.getElementById(id).style.display == '' ?
+                document.getElementById(id).style.display = 'block' :
+                document.getElementById(id).style.display = '';
 
+        }
+    </script>
     <script class="u-script" type="text/javascript" src="short.js" defer=""></script>
 </body>
 
